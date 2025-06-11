@@ -2,7 +2,8 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Mavi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uma Carta Para Você</title>
     
     <style>
         /* Animação de fade-in */
@@ -17,6 +18,7 @@
             color: #5d4037;
             text-align: center;
             padding: 80px;
+            margin: 0;
         }
         h1 {
             color: #c2185b;
@@ -44,54 +46,41 @@
         .galeria img {
             width: 180px;
             height: auto;
+            border-radius: 0px;
+            border: 0px solid white;
+            
             transition: transform 0.3s;
         }
         .galeria img:hover {
-            transform: scale(1.1);
+            transform: scale(1.5);
         }
 
-        /* Estilo do Botão */
-        button {
+        /* Estilo do Botão que é um Link */
+        .botao-link {
+            display: inline-block;
             margin-top: 40px;
             padding: 15px 30px;
             font-size: 16px;
             font-family: 'Georgia', serif;
             background-color: #c2185b;
             color: white;
-            border: none;
+            text-decoration: none;
             border-radius: 50px;
             cursor: pointer;
             transition: background-color 0.3s;
             animation: fadeIn 2.5s ease-in-out;
         }
-        button:hover {
+        .botao-link:hover {
             background-color: #ad1457;
         }
         
-        /* ======================================= */
-        /* REGRAS PARA TELAS PEQUENAS (CELULARES) */
-        /* ======================================= */
+        /* Regras para Telas Pequenas (Celulares) */
         @media (max-width: 768px) {
-            body {
-                padding: 20px;
-            }
-
-            h1 {
-                font-size: 40px;
-            }
-
-            p {
-                font-size: 17px;
-            }
-
-            .galeria img {
-                width: 200px; 
-            }
-
-            button {
-                padding: 12px 24px;
-                font-size: 15px;
-            }
+            body { padding: 20px; }
+            h1 { font-size: 32px; }
+            p { font-size: 17px; }
+            .galeria img { width: 140px; }
+            .botao-link { padding: 12px 24px; font-size: 15px; }
         }
     </style>
 
@@ -101,22 +90,15 @@
     <h1>Feliz dia dos namorados!</h1>
 
     <p>Meu amor, eu queria te dizer uma coisa...</p>
-    <p>Estar com você é estar em casa, tenho muita sorte de te ter, você é meu melhor amigo, meu companheiro e acima de tudo é o meu amor. Espero que você se sinta tão amado quanto eu me sinto ao seu lado!</p>
+    <p>Estar com você é estar em casa, tenho muita sorte de te ter, você é meu melhor amigo, meu companheiro e acima de tudo é o meu amor. Espero que você se sinta tão amado quanto eu me sinto ao seu lado!.</p>
     
     <div class="galeria">
-        
-        <img src="foto2.jpg" alt="Lembrança 2">
-        
+               <img src="foto2.jpg" alt="Lembrança 2">
     </div>
 
-    <p>Com carinho,<br>Vivian.</p>
+    <p>Beijos,<br>vivian.</p>
 
-    <button onclick="revelarMensagem()">Clique aqui para uma surpresa...</button>
+    <a href="video.html" class="botao-link">Pra você ver sempre que quiser...</a>
 
-    <script>
-        function revelarMensagem() {
-            alert("Te amo ❤️");
-        }
-    </script>
 </body>
 </html>
